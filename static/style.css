@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  font-weight: bold;
+  background: #ddd;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tabs .active {
+  background: #3498db;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px #3498db33;
+}
+
+button[type="submit"] {
+  background: #3498db;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #2980b9;
+}
+
+.hidden {
+  display: none;
+}
